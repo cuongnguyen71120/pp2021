@@ -5,7 +5,9 @@ import curses
 from domain.Student import *
 from domain.Course import *
 from domain.Mark import *
-
+from input import number_course,numberofstudent,add_course,add_student_infor,mark_mana,aver_gpa
+from output import GPA_decending,show_course,show_student,show_mark
+#Using the curses
 #Using the curses
 T_pain=curses.initscr()
 curses.start_color()

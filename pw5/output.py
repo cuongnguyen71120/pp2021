@@ -8,6 +8,7 @@ from domain.Mark import *
 T_pain=curses.initscr()
 curses.start_color()
 
+
 def show_student():
         T_pain.addstr("=======LIST STUDENT=======\n")
         T_pain.refresh()

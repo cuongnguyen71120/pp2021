@@ -40,6 +40,9 @@ def add_student_infor():
     T_pain.refresh()
     dob=T_pain.getstr().decode()
 
+    f= open("Student.txt","a")
+    f.write(id+ "\n"+name+"\n"+dob+"\n")
+    f.close()
     st_infor=Students(id,name,dob)
     StudentID.append(id)
     Student.append(st_infor)
@@ -80,6 +83,10 @@ def add_course():
     T_pain.addstr("Enter the credits are:")
     T_pain.refresh()
     credit_course=T_pain.getstr().decode()
+    
+    f= open("Courses.txt","a")
+    f.write(id+ "\n"+name+"\n"+credit_course+"\n")
+    f.close()
 
     course_f=Courses(name,id,credit_course)
     Course.append(course_f)
@@ -123,6 +130,9 @@ def mark_mana():
                     exit()
         else:
             exit()                
+    f= open("Mark.txt","a")
+    f.write(id_student+ "\n"+id_course+"\n"+str(mark)+"\n")
+    f.close()
 
     infor_mark=Marks(id_student,id_course,mark)
     Mark.append(infor_mark)
